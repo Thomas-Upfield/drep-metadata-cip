@@ -93,17 +93,33 @@ DRep Metadata will not follow the CIP-100 specification related to signing the m
 - Optional
 - Providing the rationale for why the DRep retired
 
+### Application
+DRep metadata must include all compulsory fields to be considered CIP-???? compliant. As this is an extension to CIP-100, all CIP-100 fields can be included within CIP-???? compliant metadata.
 
+### Test Vector
+See test-vector.md for examples.
 
-
-
-
+### Versioning
+This proposal should not be versioned, to update this standard a new CIP should be proposed. Although through the JSON-LD mechanism further CIPs can add to the common governance metadata vocabulary,
 
 ## Rationale: how does this CIP achieve its goals?
-<!-- The rationale fleshes out the specification by describing what motivated the design and what led to particular design decisions. It should describe alternate designs considered and related work. The rationale should provide evidence of consensus within the community and discuss significant objections or concerns raised during the discussion.
+We intentionally have kept this proposal brief and uncomplicated. This was to reduce the time to develop and deploy this standard. This way we enable tooling which depends on this standard to start development. The fields which have been chosen for this standard are heavily inspired by those that we are seeking to introduce for GovTool. We did this because GovTool will likely be the first technical implementation of this standard. 
 
-It must also explain how the proposal affects the backward compatibility of existing solutions when applicable. If the proposal responds to a CPS, the 'Rationale' section should explain how it addresses the CPS, and answer any questions that the CPS poses for potential solutions.
--->
+## Open Questions
+1. ~~Do we allow profile pictures to be included in metadata~~ <-- YES! possibly a list of pictures.
+2. Do we need to replace the `bio` field with a more structured set of fields
+3. Can we include and verify an ADA handle to uniquely identify a DRep
+4. ~~What do we do about lack of metadata integrity~~ <-- not show the metadata and make it clear that the #metadata =/ metadata#
+5. ~~Should we split this CIP up into separate transactions or also add the vote transaction metadata~~ <-- the scope is fine
+6. Compulsory vs optional for all fields
+7. types of DRep (script? representing an organisation? want delegations?)
+8. How can we verify the information that we are displaying(?) 
+9. Tooling providers displaying data SHOULD warn people that none of the information is verified and they should DYOR
+10. Tooling providers making metadata SHOULD provide some information about best practices such as putting DRep ID in twitter bio.
+11. ~~What do we care about when someone is retiring?~~ <-- just the reason why
+12. When someone updates do we want a 1 line summary of what has changed?
+13. Tooling to inform people of recent changes?
+
 
 ## Path to Active
 
