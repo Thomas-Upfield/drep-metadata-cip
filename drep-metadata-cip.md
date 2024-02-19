@@ -1,6 +1,6 @@
 ---
 CIP: ?
-Title: ?
+Title: DRep Metadata
 Category: ?
 Status: Proposed
 Authors:
@@ -8,7 +8,7 @@ Authors:
 Implementors: []
 Discussions:
     - https://github.com/cardano-foundation/CIPs/pull/?
-Created: YYYY-MM-DD
+Created: 2024-02-07
 License: CC-BY-4.0
 ---
 
@@ -26,7 +26,12 @@ License: CC-BY-4.0
 -->
 
 ## Abstract
-<!-- A short (\~200 word) description of the proposed solution and the technical issue being addressed. -->
+The Conway ledger era ushers in on-chain governance for Cardano via [CIP-1694 | A First Step Towards On-Chain Decentralized Governance](https://github.com/cardano-foundation/CIPs/blob/master/CIP-1694/README.md), with the addition of many new on-chain governance artefacts. Some of these artefacts support the linking off-chain metadata, as a way to provide context.
+
+The [CIP-100 | Governance Metadata](https://github.com/cardano-foundation/CIPs/tree/master/CIP-0100) standard provides a base framework for how all off-chain governance metadata should be formed and handled. But this is intentionally limited in scope, so that it can be expanded upon by more specific subsequent CIPs.
+
+This proposal aims to provide a specification for off-chain metadata vocabulary that can be used to give context to CIP-100 for DRep registration, updates and retirement. Without a sufficiently detailed standard for DRep metadata we introduce the possibility to undermine the ability of DReps to explain their motivations and therefore people looking for someone to represent them with the best possible information available to make that choice. Furthermore a lack of such standards risks preventing interoperability between tools, to the detriment of user experiences.
+
 
 ## Motivation: why is this CIP necessary?
 <!-- A clear explanation that introduces the reason for a proposal, its use cases and stakeholders. If the CIP changes an established design then it must outline design issues that motivate a rework. For complex proposals, authors must write a Cardano Problem Statement (CPS) as defined in CIP-9999 and link to it as the `Motivation`. -->
