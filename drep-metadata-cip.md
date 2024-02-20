@@ -89,15 +89,24 @@ There is an expressed community appetite to delegate to teams of individuals who
 - It is up to the client to check where these links go
 - Warning about linking to external links
 
+`donotlist`
+- Optional
+- If not included then the value is assumed to be false
+- A boolean expression
+- A true value means that the DRep does not want to show up in tooling that displays DReps. 
+-- I.e. they do not want to appear in GovTool’s DRep Explorer feature
+
 `members`
 - Compulsory
-- The fields describing the individual details of each team member is nested inside this field. The nested fields follow the same format as the Registering as an Individual section below except with the addition of the `role` field described below.
+- The fields describing the individual details of each team member is nested inside this field. The nested fields follow the same format as the Registering as an Individual section below except with the addition of the `role` field described below and the removal `donotlist` field in the Registering as an Individual section (teams cannot choose to omit individual members without arousing suspicion).
 - Tooling MUST display the compulsory `name` and `identity` fields for each team member, all other fields are optional.
 
 `role`
 - Optional
 - To describe the speciality of each individual team member e.g. "Constitutional Expert"
 - A very short freeform text field. Limited to 80 characters.
+
+
 
 ##### Registering as an individual
 
@@ -108,19 +117,30 @@ There is an expressed community appetite to delegate to teams of individuals who
 - Authors MUST use this field for their profile name/ username.
 - Authors SHOULD attempt to make this field unique whilst also avoiding crass language.
 
-`socials`
+`picture`
+- Optional 
+- A base 64 encoded profile picture
+- Moderation of this image must be handled on the client side to comply with their TOS
+- This SHOULD be treated as the profile picture of the individual
+
+`manifesto`
+- Optional
+- A short description of what the person believes
+
+`motivation`
+- Optional
+- A short description of why they want to be a DRep
+
+`identity`
 - Compulsory
+- A link to a social media profile where the person must reference their DRep ID in their profile.
+- This will be used by people reviewing this DRep to prove and verify that the person described in the metadata is the same as the person who set up the social media profile. 
+
+`links`
+- Optional
 - A list of urls to the social media/ websites associated with the DRep
-- Maximum number??
 - It is up to the client to check where these links go
 - Warning about linking to external links
-
-`bio`
-- Compulsory
-- A freeform text field.
-- This SHOULD support markdown text styling.
-- This SHOULD be used by the author to discuss their ideas, qualifications and motivations, are you part of a company or other organisation.
--- I.e. “I have provided x value to the community already as a developer on y project, and this is why I’d be a great DRep for you…”
 
 `donotlist`
 - Optional
